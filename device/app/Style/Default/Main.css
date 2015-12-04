@@ -1,0 +1,38 @@
+.menu {
+	width: 43.4mm;
+	padding-top: 2%;
+	background-color: #2d89cf;
+}
+
+.menu hl {
+	height: 6.9mm;
+	margin-left: 2mm;
+	selected-color: #5ea6dc;
+}
+
+.menu hl img{
+	height: 65%;
+	vertical-align: central;
+}
+
+.menu hl TextView{
+	width: 100% auto;
+	height: 40%;
+	margin-left: 1.4mm;
+	vertical-align: central;
+	color: #ffffff;
+	font: 90% arial;
+}
+
+.menu line {
+	margin-left: 1.4mm;
+	background-color: #43acfd;
+}
+
+.btn_clients {
+	background-image: url(Menu_04.png);
+}
+
+.btn_sync {
+	background-image: url(Menu_08.png);
+}

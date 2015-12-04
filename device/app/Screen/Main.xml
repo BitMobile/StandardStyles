@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:Screen xmlns:c="BitMobile.Controls" xmlns:s="BitMobile.ValueStack" StyleSheet="Main.css">
+
+	<c:VerticalLayout CssClass="menu">
+
+		<c:HorizontalLayout OnClickAction="$DoAction(Screen1)">
+			<c:Image CssClass="btn_clients" />
+			<c:TextView Text="Screen1" />
+		</c:HorizontalLayout>
+		<c:HorizontalLine />
+
+		<c:HorizontalLayout OnClickAction="$DoAction(ScreenSync)">
+			<c:Image CssClass="btn_sync" />
+			<c:TextView Text="Sync" />
+		</c:HorizontalLayout>
+		<c:HorizontalLine />
+
+	</c:VerticalLayout>
+
+</c:Screen>

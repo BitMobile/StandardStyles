@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bp:BusinessProcess xmlns:bp="BitMobile.BusinessProcess" xmlns:s="BitMobile.ValueStack">
+
+	<bp:Workflow Name="Main" Controller="Main\Main.js">		
+
+		<bp:Step Name="Summary" Screen="Main.xml">
+			<bp:Action Name="Screen1" NextStep="Screen1" />
+			<bp:Action Name="ScreenSync" NextStep="ScreenSync" />
+		</bp:Step>
+
+		<bp:Step Name="Screen1" Screen="Screen1.xml">
+		</bp:Step>
+
+		<bp:Step Name="ScreenSync" Screen="ScreenSync.xml" Controller="Sync\Main.js">
+		</bp:Step>
+
+	</bp:Workflow>
+
+</bp:BusinessProcess>

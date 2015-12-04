@@ -36,6 +36,7 @@ vl {
 
 hl {
 	width: 100%;
+	height: 100%;
 }
 
 dl {
@@ -65,11 +66,22 @@ svl vl {
 }
 
 TextView {
+	width: 100%;
+	height: 100%;
 	background-color: none;
 	color: #000000;
 }
 
+EditText {
+	width: 100%;
+	height: 100%;
+	background-color: none;
+	color: #2d89cf;
+}
+
 Button {
+	width: 100%;
+	height: 100%;
 	selected-color: #b2b2b7;
 	color: #2d89cf;
 }
@@ -84,17 +96,13 @@ MemoEdit {
 	background-color: #ffffff;
 }
 
+
+/*-------высокая сетка-------*/
+
 .grid {
 	height: 13.8mm;
-	width: 100%;
 	background-color: #ffffff;
 	selected-color: #bacdce;
-}
-
-.grid line {
-	width: 100%;
-	height: 1px;
-	background-color: #c8c7cc;
 }
 
 .grid img {
@@ -107,18 +115,16 @@ MemoEdit {
 }
 
 .grid vl {
-	width: 100%;
-	height: 100%;
 	dock-align: left;
-	padding-top: 11%;
 	padding-left: 2.4mm;
+	padding-right: 2.4mm;
+	padding-top: 11%;
 }
 
 .grid vl EditText {
 	height: 40%;
 	width: 90%;
 	font: 45% Arial;
-	color: #2d89cf;
 }
 
 .grid vl dl {
@@ -153,7 +159,6 @@ MemoEdit {
 }
 
 .main_row {
-	width: 100%;
 	height: 40%;
 	white-space: normal;
 	placeholder-color: #2d89cf;
@@ -162,24 +167,16 @@ MemoEdit {
 }
 
 .description_row {
-	width: 100%;
 	height: 23%;
 	white-space: normal;
 	font: 62% Arial;
 	color: #8e8e93;
 }
 
-.margin_top {
-	height: 3.3mm;
-	background-color: #efeff4;
-	dock-align: top;
-}
 
-
-/*для параметровторговой точки */
+/*-------низкая сетка------- */
 
 .parameter_grid {
-	width: 100%;
 	height: 6.7mm;
 	dock-align: top;
 }
@@ -187,22 +184,32 @@ MemoEdit {
 .parameter_grid TextView {
 	width: 50% auto;
 	height: 100%;
-	margin-left: 2.7mm;
 	padding-top: 30%;
+	vertical-align: central;
+	margin-left: 2.7mm;
 	color: #2d89cf;
 	dock-align: left;
 	font: 36% arial;
 }
 
-.parameter_grid EditText {
-	width: 35%;
-	height: 100%;
-	white-space: nowrap;
+.parameter_grid img {
+	height: 1.9mm;
+	width: 1.3mm;
+	margin-top: 35%;
 	margin-right: 2.4mm;
-	font: 28% Arial;
-	color: #8e8e93;
+	background-image: url(arrow.png);
 	dock-align: right;
-	text-align: right;
+}
+
+.parameter_grid EditText {
+	width: 50%;
+	height: 100%;
+	color: #2d89cf;
+	padding-top: 30%;
+	margin-left: 2.7mm;
+	dock-align: left;
+	font: 37% arial;
+	placeholder-color: #2d89cf;
 }
 
 .value {
@@ -215,6 +222,27 @@ MemoEdit {
 	dock-align: right;
 	text-align: right;
 }
+
+
+/*-------маркеры-------*/
+
+.required_side_wh{
+	height: 100%;
+	width: 1.2mm;
+	background-image: url(required_side_wh.png);
+	dock-align: left;
+	padding-right: 0mm;
+}
+
+.answered_side_wh{
+	height: 100%;
+	width: 1.2mm;
+	background-image: url(answered_side_wh.png);
+	dock-align: left;
+	padding-right: 0mm;
+}
+
+/*-------отступ-------*/
 
 .caption_grid {
 	height: 6.7mm;
@@ -235,28 +263,52 @@ MemoEdit {
 	color: #4d4d4d;
 }
 
+.margin {
+	height: 3.3mm;
+	background-color: #efeff4;
+	dock-align: top;
+}
+
+/*-------кнопка внизу экрана-------*/
+
 .bottom_btn {
-	width: 100%;
 	height: 6.7mm;
 	dock-align: bottom;
 	selected-color: #bacdce;
 	background-color: #fff;
 }
 
-.bottom_btn TextView {
-	width: 100%;
-	height: 100%;
+.bottom_btn hl TextView{
 	text-align: center;
 	padding-top: 25%;
 	color: #2d89cf;
 	font: 37% arial;
 }
 
+.bottom_btn hl .left{
+	text-align: left;
+	padding-left: 2.4mm;	
+}
+
+.bottom_btn hl .right{
+	text-align: right;
+	padding-right: 2.4mm;	
+}
+
+.bottom_btn .double TextView{
+	width: 50%;
+}
+
+.bottom_btn .triple TextView{
+	width: 33.33%;
+}
+
 .b_line {
 	dock-align: bottom;
 }
 
-/*----------top navigator----------*/
+
+/*-------top navigator-------*/
 
 .top_navigator {
 	height: 6.7mm;
@@ -266,7 +318,6 @@ MemoEdit {
 
 .top_navigator dl {
 	width: 16.3mm;
-	height: 100%;
 }
 
 .btn_menu {
@@ -287,20 +338,15 @@ MemoEdit {
 
 .btn_space{
 	width: 7mm;
-	height: 100%;
 	dock-align: right;
 }
 
 .top_navigator hl {
-	width: 100%;
-	height: 100%;
 	dock-align: top;
 	horizontal-align: central;
 }
 
 .top_navigator hl TextView {
-	width: 100%;
-	height: 100%;
 	margin-left: 0%;
 	padding-top: 26%;
 	horizontal-align: central;
@@ -312,13 +358,10 @@ MemoEdit {
 
 .btn_back {
 	width: 16.3mm;
-	height: 100%;
 	dock-align: left;
 }
 
 .btn_back TextView {
-	width: 100%;
-	height: 100%;
 	margin-left: 1mm;
 	padding-top: 26%;
 	text-align: left;
@@ -337,13 +380,10 @@ MemoEdit {
 
 .btn_forward {
 	width: 16.3mm;
-	height: 100%;
 	dock-align: right;
 }
 
 .btn_forward TextView {
-	width: 100%;
-	height: 100%;
 	margin-right: 1mm;
 	padding-top: 26%;
 	text-align: right;

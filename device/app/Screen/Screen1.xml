@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<c:Screen xmlns:c="BitMobile.Controls" xmlns:s="BitMobile.ValueStack" xmlns:d="DefaultScope" StyleSheet="Clients.css">
+
+	<c:DockLayout>		
+
+			<c:HorizontalLayout Id="btnDone" CssClass="bottom_btn">
+				<c:HorizontalLayout CssClass="triple">
+					<c:TextView Text="triple" CssClass="left"></c:TextView>
+					<c:TextView Text="triple"></c:TextView>
+					<c:TextView Text="triple" CssClass="right"></c:TextView>
+				</c:HorizontalLayout>				
+			</c:HorizontalLayout>
+			<c:HorizontalLine CssClass="b_line"/>
+
+			<c:HorizontalLayout Id="btnDone" CssClass="bottom_btn">
+				<c:HorizontalLayout CssClass="double">
+					<c:TextView Text="double" CssClass="left"></c:TextView>
+					<c:TextView Text="double" CssClass="right"></c:TextView>
+				</c:HorizontalLayout>				
+			</c:HorizontalLayout>
+			<c:HorizontalLine CssClass="b_line"/>
+
+			<c:HorizontalLayout Id="btnDone" CssClass="bottom_btn" OnClickAction="$DoBack()">
+				<c:HorizontalLayout>
+					<c:TextView Text="single"></c:TextView>
+				</c:HorizontalLayout>				
+			</c:HorizontalLayout>
+			<c:HorizontalLine CssClass="b_line"/>
+
+			<c:DockLayout CssClass="top_navigator">
+				<c:DockLayout Id="btnBack" CssClass="btn_back" OnEvent="Back" OnClickAction="$DoBack()">
+					<c:Image />
+					<c:TextView Text="btn_back" />
+				</c:DockLayout>
+				<c:DockLayout CssClass="btn_forward" OnClickAction="$DoBack()">
+					<c:TextView Id="btnForward" Text="btn_forward" />
+				</c:DockLayout>
+				<c:HorizontalLayout>
+					<c:TextView Text=".top_navigator" />
+				</c:HorizontalLayout>
+			</c:DockLayout>
+			<c:HorizontalLine />			
+
+			<c:DockLayout CssClass="top_navigator">
+				<c:DockLayout Id="btnMenu" CssClass="btn_menu" OnEvent="Back" OnClickAction="$DoBack()">
+					<c:Image CssClass="menuIcon" />
+				</c:DockLayout>
+				<c:DockLayout Id="btnForward" CssClass="btn_space" />
+				<c:HorizontalLayout>
+					<c:TextView Text=".top_navigator" />
+				</c:HorizontalLayout>
+			</c:DockLayout>
+			<c:HorizontalLine />
+
+
+		<c:ScrollView Id="grScrollView">	
+
+			<c:HorizontalLayout CssClass="margin" />
+			<c:HorizontalLine />	
+
+			<c:DockLayout CssClass="grid">
+				<c:Image></c:Image>
+				<c:VerticalLayout>
+					<c:TextView Text="сетка списка" CssClass="description_row" />
+					<c:TextView Text=".grid vl .main_row" CssClass="main_row" />
+				</c:VerticalLayout>
+			</c:DockLayout>
+			<c:HorizontalLine />	
+
+			<c:DockLayout CssClass="grid">
+				<c:Image />
+				<c:HorizontalLayout CssClass="required_side_wh"></c:HorizontalLayout>
+				<c:VerticalLayout>
+					<c:TextView Text="высокая сетка с красным маркером" CssClass="description_row" />
+					<c:TextView Text=".grid vl .main_row" CssClass="main_row" />
+				</c:VerticalLayout>
+			</c:DockLayout>
+			<c:HorizontalLine />	
+
+			<c:DockLayout CssClass="grid">
+				<c:HorizontalLayout CssClass="answered_side_wh"></c:HorizontalLayout>
+				<c:VerticalLayout>
+					<c:TextView Text="высокая сетка с серым маркером" CssClass="description_row" />
+					<c:TextView Text=".grid vl .main_row" CssClass="main_row" />
+				</c:VerticalLayout>
+			</c:DockLayout>
+			<c:HorizontalLine />	
+
+			<c:HorizontalLayout CssClass="caption_grid">
+				<c:TextView Text=".caption_grid"></c:TextView>
+			</c:HorizontalLayout>
+			<c:HorizontalLine />
+		
+			<c:DockLayout CssClass="parameter_grid">
+				<c:Image></c:Image>
+				<c:TextView CssClass="value" Text=".value"/>
+				<c:TextView Text=".parameter_grid TextView"></c:TextView>
+			</c:DockLayout>
+			<c:HorizontalLine />
+
+			<c:DockLayout CssClass="parameter_grid">
+				<c:HorizontalLayout CssClass="required_side_wh"></c:HorizontalLayout>
+				<c:TextView CssClass="value" Text=".parameter_grid .value"/>
+				<c:TextView Text=".parameter_grid TextView"></c:TextView>
+			</c:DockLayout>
+			<c:HorizontalLine />
+
+			<c:HorizontalLayout CssClass="margin" />
+
+		</c:ScrollView>
+
+	</c:DockLayout>
+	
+
+</c:Screen>
