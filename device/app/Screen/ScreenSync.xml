@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c:Screen xmlns:c="BitMobile.Controls" xmlns:s="BitMobile.ValueStack" StyleSheet="Sync.css">
 
-		<c:ScrollView Id="VLayout">
+	<c:VerticalLayout>
 
-			<c:DockLayout CssClass="top_navigator">
-				<c:DockLayout CssClass="btn_menu" OnClickAction="$DoBack()">
-					<c:Image CssClass="menuIcon" />
-				</c:DockLayout>
-				<c:DockLayout CssClass="btn_space" />
-				<c:HorizontalLayout>
-					<c:TextView Text="#sync#" />
-				</c:HorizontalLayout>
+		<c:DockLayout CssClass="top_navigator">
+			<c:DockLayout CssClass="btn_menu" OnClickAction="$DoBack()">
+				<c:Image CssClass="menuIcon" />
 			</c:DockLayout>
-			<c:HorizontalLine />
+			<c:DockLayout CssClass="btn_space" />
+			<c:HorizontalLayout>
+				<c:TextView Text="#sync#" />
+			</c:HorizontalLayout>
+		</c:DockLayout>
+		<c:HorizontalLine />
+
+		<c:ScrollView Id="VLayout">
 
 			<c:HorizontalLayout CssClass="caption_grid">
 				<c:TextView Text="#synchronizationData#:" />
@@ -36,9 +38,7 @@
 					</c:HorizontalLayout>
 				</c:VerticalLayout>
 			</c:HorizontalLayout>
-			<c:HorizontalLine />
-
-			<c:HorizontalLayout CssClass="end_of_block" />
+			<c:HorizontalLine />			
 
 			<c:HorizontalLayout CssClass="caption_grid">
 				<c:TextView Text="#synchronizationPhoto#:" />
@@ -64,8 +64,8 @@
 			</c:HorizontalLayout>
 			<c:HorizontalLine />
 
-			<c:HorizontalLayout CssClass="empty_space" />
-
 		</c:ScrollView>
+
+	</c:VerticalLayout>
 	
 </c:Screen>
